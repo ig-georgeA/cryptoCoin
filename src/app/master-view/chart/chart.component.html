@@ -1,0 +1,9 @@
+<div class="column-layout column">
+  <igx-combo [data]="northwindCategories" [autoFocusSearch]="true" [filterable]="true" [showSearchCaseIcon]="false" valueKey="categoryID" displayKey="categoryID" groupKey placeholder="Search..." type="box" [disabled]="false" value="[5]" class="combo"></igx-combo>
+  <div class="row-layout row"></div>
+  <igx-select type="border" [disabled]="false" class="select">
+    <igx-select-item [isHeader]="false" value="Option" [disabled]="false">
+      Option
+    </igx-select-item>
+  </igx-select>
+</div>

@@ -1,0 +1,56 @@
+<div class="column-layout column">
+  <igx-input-group placeholder="Search by name" type="box" class="input-group">
+    <label igxLabel for="inputField"></label>
+    <input type="text" name="inputField" [required]="false" [disabled]="false" placeholder="Search by name" igxInput />
+  </igx-input-group>
+  <igx-list class="list">
+    <igx-list-item *ngFor="let item of northwindCategories" class="list-item">
+      <div igxListLine class="row-layout row">
+        <igx-avatar src="https://www.cryptocompare.com/media/37746251/btc.png" [roundShape]="true" size="small" class="avatar"></igx-avatar>
+        <p class="text">Bitcoin (BTC)</p>
+        <div class="column-layout_2 column">
+          <p class="igx-typography__overline text_3">RANK</p>
+          <div class="row-layout_1 row">
+            <p class="igx-typography__body-2 text_2">1</p>
+          </div>
+        </div>
+        <div class="column-layout_1 column">
+          <p class="igx-typography__overline text_3">PRICE</p>
+          <div class="row-layout_1 row">
+            <p class="igx-typography__body-2 text_2">$60,123.00</p>
+          </div>
+        </div>
+        <div class="column-layout_2 column-layout_3 column">
+          <p class="igx-typography__overline text_3">24H</p>
+          <div class="row-layout_1 row">
+            <p class="igx-typography__body-2 text_1">-3.63%</p>
+            <igx-icon font="material" [active]="true" class="icon">arrow_drop_down</igx-icon>
+          </div>
+        </div>
+        <div class="column-layout_2 column-layout_3 column">
+          <p class="igx-typography__overline text_3">7D</p>
+          <div class="row-layout_1 row">
+            <p class="igx-typography__body-2 text_1">-1.50%</p>
+            <igx-icon font="material" [active]="true" class="icon">arrow_drop_down</igx-icon>
+          </div>
+        </div>
+        <div class="column-layout_1 column">
+          <p class="igx-typography__overline text_3">MARKET CAP</p>
+          <div class="row-layout_1 row">
+            <p class="igx-typography__body-2 text_2">$123,456,789.00</p>
+          </div>
+        </div>
+        <div class="column-layout_1 column">
+          <p class="igx-typography__overline text_3">PROOF TYPE</p>
+          <div class="row-layout_1 row">
+            <p class="igx-typography__body-2 text_2">PoW</p>
+          </div>
+        </div>
+        <button igxButton="flat" [disabled]="false" class="button">
+          <igx-icon>show_chart</igx-icon>
+          <span>Volatility</span>
+        </button>
+      </div>
+    </igx-list-item>
+  </igx-list>
+</div>

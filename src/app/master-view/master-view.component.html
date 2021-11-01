@@ -1,0 +1,69 @@
+<igx-navbar class="navigation-bar">
+  <button igxButton="icon" igxButtonColor="var(--igx-surface-500)" type="icon" [disabled]="false" igxNavbarAction [igxToggleAction]="navigationDrawer">
+    <igx-icon>menu</igx-icon>
+  </button>
+  <div igxNavbarTitle>CryptoCoin</div>
+  <button igxButton="icon" igxButtonColor="var(--igx-surface-500)" type="icon" [disabled]="false" [igxToggleAction]="loginDialog">
+    <igx-icon>person</igx-icon>
+  </button>
+</igx-navbar>
+<div class="row-layout row">
+  <igx-nav-drawer width="320px" [pin]="true" [pinThreshold]="768" position="left" [isOpen]="true" #navigationDrawer class="navigation-drawer">
+    <ng-template igxDrawer>
+      <span [isHeader]="false" igxDrawerItem>
+        <igx-icon font="material" [active]="true">work</igx-icon>
+        <span class="navigation-drawer_1">My Portfolio</span>
+      </span>
+      <span [isHeader]="true" igxDrawerItem>
+        <span class="navigation-drawer_1">Top 100 Cryptocurrencies</span>
+      </span>
+      <span [isHeader]="false" igxDrawerItem routerLink="/master-view/card-view">
+        <igx-icon font="material" [active]="true">dashboard</igx-icon>
+        <span class="navigation-drawer_1">Card View</span>
+      </span>
+      <span [isHeader]="false" igxDrawerItem routerLink="/master-view/grid-view">
+        <igx-icon font="material" [active]="true">grid_on</igx-icon>
+        <span class="navigation-drawer_1">Grid View</span>
+      </span>
+      <span [isHeader]="false" igxDrawerItem routerLink="/master-view/list-view">
+        <igx-icon font="material" [active]="true">view_list</igx-icon>
+        <span class="navigation-drawer_1">List View</span>
+      </span>
+      <span [isHeader]="false" igxDrawerItem routerLink="/master-view/chart">
+        <igx-icon font="material" [active]="true">insert_chart</igx-icon>
+        <span class="navigation-drawer_1">Volatility</span>
+      </span>
+    </ng-template>
+  </igx-nav-drawer>
+  <div class="views-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<igx-dialog [closeOnOutsideSelect]="true" [closeOnEscape]="true" #loginDialog class="login-dialog">
+  <div>
+    <div class="column-layout_1 column">
+      <div class="column-layout column">
+        <igx-avatar src="/assets/CryptoApp_Logo.svg" [roundShape]="true" size="large" class="avatar"></igx-avatar>
+        <h5 class="title">Login to CryptoCoin</h5>
+      </div>
+      <button igxButton="raised" [disabled]="false" class="user-input">
+        <span>Login with Google</span>
+      </button>
+      <igx-input-group type="border" class="user-input">
+        <label igxLabel for="inputField">Email</label>
+        <input type="text" name="inputField" [required]="false" [disabled]="false" igxInput />
+      </igx-input-group>
+      <igx-input-group type="border" class="user-input">
+        <label igxLabel for="inputField">Password</label>
+        <input type="password" name="inputField" [required]="false" [disabled]="false" igxInput />
+      </igx-input-group>
+      <a href target="_blank" class="link">Forgot your password?</a>
+      <button igxButton="raised" [disabled]="false" class="button">
+        <span>Login</span>
+      </button>
+      <button igxButton="outlined" [disabled]="false" class="button_1">
+        <span>Create new account</span>
+      </button>
+    </div>
+  </div>
+</igx-dialog>

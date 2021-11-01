@@ -1,0 +1,40 @@
+<div class="row-layout row">
+  <igx-card type="outlined" *ngFor="let item of northwindEmployees" class="card">
+    <igx-card-header>
+      <h3 igxCardHeaderTitle>Bictoin</h3>
+      <h5 igxCardHeaderSubtitle>BTC</h5>
+      <igx-avatar [src]="item.avatarUrl" [roundShape]="true" size="medium"></igx-avatar>
+    </igx-card-header>
+    <igx-card-content class="content">
+      <div class="row-layout_1 row">
+        <div class="column-layout column">
+          <p class="igx-typography__overline text">PRICE</p>
+          <p class="igx-typography__subtitle-2 title_1">$60,454,35</p>
+        </div>
+        <div class="column-layout_1 column">
+          <p class="igx-typography__overline text">24H</p>
+          <p class="igx-typography__subtitle-2 title">-3.63%</p>
+        </div>
+      </div>
+      <div class="row-layout_2 row">
+        <div class="column-layout column">
+          <p class="igx-typography__overline text">MARKET CAP.</p>
+          <p class="igx-typography__subtitle-2 title_1">$123,456,789,00</p>
+        </div>
+        <div class="column-layout_1 column">
+          <p class="igx-typography__overline text">RANK</p>
+          <p class="igx-typography__subtitle-2 title_1">1</p>
+        </div>
+      </div>
+    </igx-card-content>
+    <igx-card-actions [reverse]="true" class="actions">
+      <button igxButton="flat" [disabled]="false" class="button">
+        <igx-icon>show_chart</igx-icon>
+        <span>Volatility</span>
+      </button>
+      <button igxButton="icon" type="icon" [disabled]="false">
+        <igx-icon>add_circle</igx-icon>
+      </button>
+    </igx-card-actions>
+  </igx-card>
+</div>
